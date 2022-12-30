@@ -1,17 +1,19 @@
 package com.runtimeturtle.springpro;
 
-import com.runtimeturtle.springpro.provider.HelloWorldMessageProvider;
-import com.runtimeturtle.springpro.renderer.HelloWorldMessageRenderer;
+import com.runtimeturtle.springpro.provider.MessageProvider;
+import com.runtimeturtle.springpro.provider.impl.HelloWorldMessageProvider;
+import com.runtimeturtle.springpro.renderer.MessageRenderer;
+import com.runtimeturtle.springpro.renderer.impl.HelloWorldMessageRenderer;
 
 public class HelloWordApp {
 
 	public static void main(String[] args) {
 
-		HelloWorldMessageProvider msgProvider = new HelloWorldMessageProvider();
-		HelloWorldMessageRenderer msgRenderer = new HelloWorldMessageRenderer();
+		MessageProvider msgProvider = new HelloWorldMessageProvider();
+		MessageRenderer msgRenderer = new HelloWorldMessageRenderer();
 		msgRenderer.setMessageProvider(msgProvider);
-		
+
 		msgRenderer.renderer();
-		
+
 	}
 }

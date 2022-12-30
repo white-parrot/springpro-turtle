@@ -6,6 +6,6 @@ public interface MessageRenderer {
 
 	public void setMessageProvider(MessageProvider msgProvider);
 
-	public void renderer();
+	public void render();
 
 }

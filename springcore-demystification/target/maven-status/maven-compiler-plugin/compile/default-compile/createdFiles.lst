@@ -1,0 +1,6 @@
+com\runtimeturtle\springpro\provider\MessageProvider.class
+com\runtimeturtle\springpro\renderer\MessageRenderer.class
+com\runtimeturtle\springpro\provider\impl\HelloWorldMessageProvider.class
+com\runtimeturtle\springpro\renderer\impl\HelloWorldMessageRenderer.class
+com\runtimeturtle\springpro\factory\MessageSupportFactory.class
+com\runtimeturtle\springpro\HelloWordApp.class

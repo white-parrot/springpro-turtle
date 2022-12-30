@@ -13,7 +13,7 @@ public class HelloWorldMessageRenderer implements MessageRenderer {
 	}
 
 	@Override
-	public void renderer() {
+	public void render() {
 		if (msgProvider == null) {
 			throw new RuntimeException("Message Provider is Not Set");
 		} else {

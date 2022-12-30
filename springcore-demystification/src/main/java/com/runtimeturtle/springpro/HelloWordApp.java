@@ -1,19 +1,20 @@
 package com.runtimeturtle.springpro;
 
-import com.runtimeturtle.springpro.factory.MessageSupportFactory;
-import com.runtimeturtle.springpro.provider.MessageProvider;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.runtimeturtle.springpro.renderer.MessageRenderer;
 
 public class HelloWordApp {
 
 	public static void main(String[] args) {
-
-		MessageProvider msgProvider = MessageSupportFactory.getInstance().getMessageProvider();
-		MessageRenderer msgRenderer = MessageSupportFactory.getInstance().getMessageRenderer();
-
-		msgRenderer.setMessageProvider(msgProvider);
-
-		msgRenderer.renderer();
-
+		/*
+		 * Configure the POM.xml for the spring-context dependency delete the project
+		 * and import again as maven project
+		 */
+		@SuppressWarnings("resource")
+		ApplicationContext ctx = new ClassPathXmlApplicationContext("app-context.xml");
+		MessageRenderer msgRenderer = ctx.getBean("renderer", MessageRenderer.class);
+		msgRenderer.render();
 	}
 }
